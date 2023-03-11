@@ -8,7 +8,6 @@ const Navbar = () => {
         burger.classList.toggle('fa-times');
         navLinks.forEach((index) => {
             index.style.opacity = '1';
-
         })
     });
 }
@@ -48,20 +47,47 @@ document.addEventListener('visibilitychange',
 
 
 // email js start
-$("#contact-form").submit(function (event) {
-    emailjs.init("2nY2nBlaP4jkrj3f-");
+// $("#contact-form").submit(function (event) {
+//     emailjs.init("MgTJCGBqkaucDoJZ-");
 
-    emailjs.sendForm('service_8p0a2nq', 'template_xq24twn', '#contact-form')
-        .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-            document.getElementById("contact-form").reset();
+//     emailjs.sendForm('MgTJCGBqkaucDoJZ-', 'o_Xe_soi8RInspN2BFaD8', '#contact-form')
+//         .then(function (response) {
+//             console.log('SUCCESS!', response.status, response.text);
+//             document.getElementById("contact-form").reset();
+//             alert("Form Submitted Successfully");
+//         }, function (error) {
+//             console.log('FAILED...', error);
+//             alert("Form Submission Failed! Try Again");
+//         });
+//     event.preventDefault();
+// });
+
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Collect the form data
+    const form = event.target;
+    const name = form.elements.name.value;
+    const to = form.elements.email.value;
+    const phone = form.elements.phone.value;
+    const subject = "Contact ME";
+    const message = form.elements.message.value;
+
+    // Use EmailJS to send the email
+    emailjs.init("MgTJCGBqkaucDoJZ-");
+    emailjs.send('service_or5xurx', 'template_6x4gwux', { from_name: name, to_name: to, subject: subject, user_mobile_number: phone, message_html: message, })
+        .then(function (res) {
+            console.log('SUCCESS!', res.status, res.text);
             alert("Form Submitted Successfully");
         }, function (error) {
             console.log('FAILED...', error);
             alert("Form Submission Failed! Try Again");
         });
-    event.preventDefault();
+
+    // Clear the form fields
+    form.reset();
 });
+
 
 // Emailjs end
 
