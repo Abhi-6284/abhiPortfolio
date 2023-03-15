@@ -41,7 +41,7 @@ document.addEventListener('visibilitychange',
         }
         else {
             document.title = "Come Back To My Portfolio";
-            $("#favicon").attr("href", "https://icons8.com/icon/LWt6Q00GmTis/paper-plane");
+            $("#favicon").attr("href", "assets/images/icons8-crying.gif");
         }
     });
 
