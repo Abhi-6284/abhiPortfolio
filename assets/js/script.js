@@ -37,11 +37,11 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Portfolio | Prashant Abhishek Lugun";
-            $("#favicon").attr("href", "assets/images/favicon.png");
+            $("#favicon").attr("href", "https://icons8.com/icon/110569/monitor");
         }
         else {
             document.title = "Come Back To My Portfolio";
-            $("#favicon").attr("href", "assets/images/icons8-crying.gif");
+            $("#favicon").attr("href", "https://icons8.com/icon/srEIYKXGWyot/come");
         }
     });
 
