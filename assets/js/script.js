@@ -148,4 +148,8 @@ srtop.reveal('.education .box', { interval: 250 });
 srtop.reveal('.contact .container', { delay: 500 });
 srtop.reveal('.contact .container .form-group', { delay: 600 });
 
+/* SCROLL MAP */
+srtop.reveal('.map .container', { delay: 500 });
+srtop.reveal('.map .container .iframe-map', { delay: 600 });
+
 // content revel end

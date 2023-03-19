@@ -21,13 +21,9 @@
 
 </head>
 
-<body oncontextmenu="return false" onmousedown="return false" onselectstart="return false">
-
-  <!-- pre loader -->
-  <!-- <div class="loader-container">
-    <img draggable="false" src="./assets/images/preloader.gif" alt="">
-  </div> -->
-
+<body oncontextmenu="return false" onselectstart="return false">
+<!-- <body> -->
+  
   <!-- navbar starts -->
   <header>
     <img src="assets/images/Pink Minimal Typography Logo .jpg" alt="">
@@ -86,7 +82,7 @@
         <img draggable="false" class="tilt" src="assets/images/profile.jpeg" alt="" height="300">
       </div>
       <div class="content">
-        <h3>I'm Prashant Lugun</h3>
+        <h3>I'm Prashant <span style="color:#ff7b00">Lugun</span></h3>
         <span class="tag">Full Stack Developer</span>
 
         <p>I am a Full-Stack developer based in Gujarat, India.
@@ -107,7 +103,7 @@
         </div>
 
         <div class="resumebtn">
-          <a href="Prashant Abhishek Lugun CV Resume.pdf" class="btn"><span>Resume</span>
+          <a href="assets/Doc/resumeAv2023.pdf#toolbar=0"  target="_blank" class="btn"><span>Resume</span>
             <i class="fas fa-chevron-right"></i>
           </a>
         </div>
@@ -183,7 +179,7 @@
 
         <div class="bar">
           <div class="info">
-            <img src="https://icons8.com/icon/TpULddJc4gTh/c++" />
+            <img src="data:image/png;base64,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">
             <span>C</span>
           </div>
         </div>
@@ -318,13 +314,15 @@
   </section>
   <!-- contact section ends -->
 
-  <section>
-    <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+  <section class="map" id="map">
+    <div class="container">
+      <iframe class="iframe-map" width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
       src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=21.825011,%2073.097931+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
       <a href="https://www.maps.ie/distance-area-calculator.html">
         measure acres/hectares on map
       </a>
     </iframe>
+    </div>
   </section>
 
 
@@ -410,7 +408,7 @@
   <!-- Disable CTRL U and Right Click -->
   <script>
     document.onkeydown = function (e) {
-      if (e.ctrlKey && e.keyCode === 85) {
+      if (e.ctrlKey && e.keyCode === 85 && e.keyCode === 123) {
         return false;
       }
     };
