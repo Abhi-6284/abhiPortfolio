@@ -47,20 +47,6 @@ document.addEventListener('visibilitychange',
 
 
 // email js start
-// $("#contact-form").submit(function (event) {
-//     emailjs.init("MgTJCGBqkaucDoJZ-");
-
-//     emailjs.sendForm('MgTJCGBqkaucDoJZ-', 'o_Xe_soi8RInspN2BFaD8', '#contact-form')
-//         .then(function (response) {
-//             console.log('SUCCESS!', response.status, response.text);
-//             document.getElementById("contact-form").reset();
-//             alert("Form Submitted Successfully");
-//         }, function (error) {
-//             console.log('FAILED...', error);
-//             alert("Form Submission Failed! Try Again");
-//         });
-//     event.preventDefault();
-// });
 
 document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
