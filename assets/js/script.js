@@ -1,3 +1,17 @@
+// const Navbar = () => {
+//     const burger = document.querySelector('#menu');
+//     const nav = document.querySelector('.navbar');
+//     const navLinks = document.querySelectorAll('.navlink li');
+
+//     burger.addEventListener('click', function () {
+//         nav.classList.toggle('navbar-active');
+//         burger.classList.toggle('fa-times');
+//         navLinks.forEach((index) => {
+//             index.style.opacity = '1';
+//         })
+//     });
+// }
+
 const Navbar = () => {
     const burger = document.querySelector('#menu');
     const nav = document.querySelector('.navbar');
@@ -6,17 +20,32 @@ const Navbar = () => {
     burger.addEventListener('click', function () {
         nav.classList.toggle('navbar-active');
         burger.classList.toggle('fa-times');
-        navLinks.forEach((index) => {
-            index.style.opacity = '1';
+        navLinks.forEach((link) => {
+            link.style.opacity = '1';
+        })
+    });
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', function () {
+            // Remove active class from all links
+            // Add active class to clicked link
+            navLinks.forEach((link) => {
+                console.log(link);
+                link.classList.remove('active');
+            })
+            link.classList.add('active');
+            console.log(navLinks);
+            
         })
     });
 }
+
 
 Navbar();
 
 // Typing script start
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "web designing", "web development", "Android development"],
+    strings: ["backend development", "frontend development", "web designing", "web development", "Android development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -31,8 +60,6 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 });
 // Tilt image script end
 
-
-
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
@@ -43,7 +70,8 @@ document.addEventListener('visibilitychange',
             document.title = "Come Back To My Portfolio";
             $("#favicon").attr("href", "https://icons8.com/icon/srEIYKXGWyot/come");
         }
-    });
+    }
+);
 
 
 // email js start

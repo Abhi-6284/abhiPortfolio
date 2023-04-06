@@ -1588,7 +1588,8 @@ form .button-area {
 #scroll-top.active {
     bottom: 70px;
     visibility: visible;
-    opacity: 1;
+    opacity: 0;
+    
 }
 
 /* scroll top ends */
