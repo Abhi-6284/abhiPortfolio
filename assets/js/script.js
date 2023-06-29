@@ -12,6 +12,10 @@
 //     });
 // }
 
+const skills = () => {
+    
+}
+
 const Navbar = () => {
     const burger = document.querySelector('#menu');
     const nav = document.querySelector('.navbar');

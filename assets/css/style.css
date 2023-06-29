@@ -925,6 +925,8 @@ header .navbar ul li a:hover {
 }
 
 .skills .container .bar {
+    display: flex;
+    justify-content: center;
     cursor: pointer;
     margin-bottom: 15px;
     padding: 10px;
@@ -953,7 +955,8 @@ header .navbar ul li a:hover {
 }
 
 .skills .container .bar .info span {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
+    font-size:medium;
     font-weight: 500;
     font-family: "Poppins";
     margin-left: 0.5rem;
