@@ -90,7 +90,7 @@
         
         <div class="box-container">
           <div class="box">
-            <p><span>Age:</span> <span id="age"></span></p>
+            <p><span>Age:</span> <span id="age" style="color:black"></span></p>
             <p><span> Phone : </span> <a href="tel:+918401704771" style="color:black">+91 84017 04771</a></p>
           </div>
           <div class="box">
@@ -480,17 +480,9 @@
   <script>
         function calculateAge() {
             var ageDisplay = document.getElementById("age");
-            
-            // Calculate the age based on a specific DOB (e.g., 20 Oct 1998)
-            var selectedDOB = new Date("1998-10-20");
-            
-            // Get the current date
+            var selectedDOB = new Date("1992-10-20");
             var currentDate = new Date();
-            
-            // Calculate the age
             var age = currentDate.getFullYear() - selectedDOB.getFullYear();
-            
-            // Check if the birthday hasn't occurred yet this year
             if (currentDate.getMonth() < selectedDOB.getMonth() || (currentDate.getMonth() === selectedDOB.getMonth() && currentDate.getDate() < selectedDOB.getDate())) {
                 age--;
             }
