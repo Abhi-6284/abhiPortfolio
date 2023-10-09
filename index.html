@@ -86,8 +86,11 @@
         <h3>I'm Prashant Abhishek <span style="color:#ff7b00">Lugun</span></h3>
         <span class="tag">Full Stack Developer</span>
 
-        <p>As an experienced Full Stack Developer (MERN), India, I am passionate about improving my coding skills and developing websites. With expertise in programming languages like HTML5, CSS, JavaScript, PHP, Node.js, and MERN development with GraphQL middleware, I aim to create innovative and high-quality websites and Softwares. </p>
-        
+        <p>As an experienced Full Stack Developer (MERN), India, I am passionate about improving my coding skills and
+          developing websites. With expertise in programming languages like HTML5, CSS, JavaScript, PHP, Node.js, and
+          MERN development with GraphQL middleware, I aim to create innovative and high-quality websites and Softwares.
+        </p>
+
         <div class="box-container">
           <div class="box">
             <p><span>Age:</span> <span id="age" style="color:black"></span></p>
@@ -136,7 +139,7 @@
     <div class="container">
       <div class="row" id="skillsContainer">
         <!-- <div id="skillBox"></div> -->
-        <div class="bar">
+        <!-- <div class="bar">
           <div class="info">
             <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" />
             <span>HTML5</span>
@@ -240,7 +243,7 @@
             <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png" />
             <span>React JS</span>
           </div>
-        </div>
+        </div> -->
 
         <!-- <div class="bar">
           <div class="info">
@@ -478,22 +481,59 @@
     };
   </script> -->
   <script>
-        function calculateAge() {
-            var ageDisplay = document.getElementById("age");
-            var selectedDOB = new Date("1998-10-20");
-            var currentDate = new Date();
-            var age = currentDate.getFullYear() - selectedDOB.getFullYear();
-            if (currentDate.getMonth() < selectedDOB.getMonth() || (currentDate.getMonth() === selectedDOB.getMonth() && currentDate.getDate() < selectedDOB.getDate())) {
-                age--;
-            }
-            
-            // Update the display element with the calculated age
-            ageDisplay.textContent = age + "+";
-        }
-        
-        // Call the calculateAge function to initially display the age
-        calculateAge();
-    </script>
+    function calculateAge() {
+      var ageDisplay = document.getElementById("age");
+      var selectedDOB = new Date("1998-10-20");
+      var currentDate = new Date();
+      var age = currentDate.getFullYear() - selectedDOB.getFullYear();
+      if (currentDate.getMonth() < selectedDOB.getMonth() || (currentDate.getMonth() === selectedDOB.getMonth() && currentDate.getDate() < selectedDOB.getDate())) {
+        age--;
+      }
+
+      // Update the display element with the calculated age
+      ageDisplay.textContent = age + "+";
+    }
+
+    // Call the calculateAge function to initially display the age
+    calculateAge();
+
+    // Define an array of skills
+    const skillsData = [
+      { iconClass: "fab fa-html5", name: "HTML5" },
+      { iconClass: "fab fa-css3", name: "CSS3" },
+      { iconClass: "fab fa-bootstrap", name: "Bootstrap" },
+      { iconClass: "fab fa-js", name: "JavaScript" },
+      { iconClass: "fab fa-java", name: "Java" },
+      { iconClass: "fab fa-php", name: "PHP" },
+      { iconClass: "fab fa-python", name: "Python" },
+      { iconClass: "fab fa-github", name: "GitHub" },
+      { iconClass: "fab fa-node-js", name: "Node.js" },
+      { iconClass: "fab fa-graphql", name: "GraphQL" },
+      { iconClass: "fab fa-mongodb", name: "MongoDB" },
+      { iconClass: "fab fa-react", name: "React JS" },
+    ];
+
+    // Function to generate HTML for skills
+    function generateSkillsHTML() {
+      const skillsContainer = document.getElementById("skillsContainer");
+
+      skillsData.forEach(skill => {
+        const skillHTML = `
+                  <div class="bar">
+                      <div class="info">
+                          <i class="${skill.iconClass}"></i>
+                          <span>${skill.name}</span>
+                      </div>
+                  </div>
+              `;
+
+        skillsContainer.innerHTML += skillHTML;
+      });
+    }
+
+    // Call the function to generate skills HTML
+    generateSkillsHTML();
+  </script>
 </body>
 
 </html>
