@@ -114,7 +114,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 // scroll animation start
 window.addEventListener('scroll', function () {
     var scroll = this.document.querySelector('#scroll-top');
-    scroll.classList.toggle("active", this.window.scrollY < 500);
+    scroll.classList.toggle("active", this.window.scrollY > 500);
 })
 function scrollToTop() {
     window.scrollTo({
